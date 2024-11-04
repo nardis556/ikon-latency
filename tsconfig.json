@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.main.json",
+  "include": [
+    "src/**/*.ts",
+    // "eslint.config.js",
+    // ".eslintrc.cjs",
+    // ".prettierrc.cjs"
+  ],
+  "compilerOptions": {
+    "noEmit": true
+  }
+}
