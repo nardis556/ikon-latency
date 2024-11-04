@@ -101,3 +101,5 @@ async function runLatencyTest(interval: string, duration: string) {
 
 // Usage example: runLatencyTest('1m', '30m')
 runLatencyTest('1m', '30m')
+
+//test
