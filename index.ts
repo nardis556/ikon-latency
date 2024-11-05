@@ -81,7 +81,14 @@ async function runLatencyTest(interval: string, duration: string) {
     const durationMs = parseTimeString(duration)
     const endTime = Date.now() + durationMs
 
-    const logFile = `logs/latency_${new Date().toISOString().replace(/[:.]/g, '-')}.log`
+    const env = "prod"
+    const logDir = `logs/${env}`
+    
+    if (!fs.existsSync(logDir)) {
+        fs.mkdirSync(logDir, { recursive: true })
+    }
+
+    const logFile = `${logDir}/latency_${new Date().toISOString().replace(/[:.]/g, '-')}.log`
 
     while (Date.now() < endTime) {
         try {
